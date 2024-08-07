@@ -65,7 +65,7 @@ const typed = new Typed('.multiple-text', {
 // Initialize EmailJS
 emailjs.init('vsQTVEyE2tQnRCIIl'); // User ID de EmailJS
 
-document.getElementById('form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const btn = document.getElementById('button');
@@ -76,10 +76,10 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-            btn.value = 'Send Email';
-            alert('Sent!');
+            btn.value = 'Send Message';
+            alert('Enviado breoo!');
         }, (err) => {
-            btn.value = 'Send Email';
+            btn.value = 'Send Message';
             alert('Failed to send message. Please try again.');
             console.error('Error:', err);
         });

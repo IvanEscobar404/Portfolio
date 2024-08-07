@@ -116,7 +116,7 @@
                 <div class="portfolio-layer">
                     <h4>Web design</h4>
                     <p>Web diseñada para cafeteria full responsive, con solo HTML y CSS. Solo efecto visuales, botones sin acciones</p>
-                    <i class="fa-solid fa-share-from-square"></i>
+                    <a href="https://github.com/IvanEscobar404/Cafeteria" target="_blank"> <i class="fa-solid fa-share-from-square"></i></a> 
                 </div>
             </div> 
 
@@ -175,24 +175,18 @@
     <!--Contact Design-->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form id="form">
-            <div class="field">
-                <label for="to_name">to_name</label>
-                <input type="text" name="to_name" id="to_name">
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email Adress">
             </div>
-            <div class="field">
-                <label for="from_name">from_name</label>
-                <input type="text" name="from_name" id="from_name">
+
+            <div class="input-box">
+                <input type="number" name="mobile_number" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
             </div>
-            <div class="field">
-                <label for="message">message</label>
-                <input type="text" name="message" id="message">
-            </div>
-            <div class="field">
-                <label for="reply_to">reply_to</label>
-                <input type="text" name="reply_to" id="reply_to">
-            </div>
-            <input type="submit" id="button" value="Send Email">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn" id="button">
         </form>
     </section>
 
@@ -208,10 +202,18 @@
         </div>
     </footer>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script src="index.js"></script>
+
+<!-- Incluye la biblioteca EmailJS -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+ <!--SCROLL REVEAL JS-->
+ <script src="https://unpkg.com/scrollreveal"></script>
+
+ <!--TYPED JS-->
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+ <!--MAIN JS-->
+ <script src="index.js"></script>
+ <script src="https://kit.fontawesome.com/443d1add6e.js" crossorigin="anonymous"></script>
 </body>
 </html>
