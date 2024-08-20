@@ -54,7 +54,7 @@ ScrollReveal().reveal('.home-contact p, .about-content', {origin: 'right'});
 
 /************************ typed js ***************************  */
 const typed = new Typed('.multiple-text', {
-    strings: ['Software and Web Developer', 'Video Editor'],
+    strings: ['Software and Web Developer'],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000,
@@ -77,10 +77,27 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
             btn.value = 'Send Message';
-            alert('Enviado breoo!');
+            showModal('confirmation-modal');
         }, (err) => {
             btn.value = 'Send Message';
             alert('Failed to send message. Please try again.');
             console.error('Error:', err);
         });
 });
+
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const closeBtn = modal.querySelector('.close');
+
+    modal.style.display = 'block';
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
