@@ -194,6 +194,136 @@ span{
     line-height: 1.5;
 }
 
+
+
+.experience {
+    background: var(--bg-color);
+    padding-top: 15rem;
+}
+
+.experience-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 3rem 0;
+}
+
+.experience-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--main-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.experience-item {
+    padding: 15px 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-info {
+    width: 45%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.experience-content {
+    width: 45%;
+    padding-left: 30px;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--main-color);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.experience-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-date {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.company-location {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.experience-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.company-link {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.company-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experience-container::after {
+        left: 31px;
+    }
+
+    .experience-item {
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .experience-info {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .experience-content {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .experience-item::before {
+        left: 23px;
+    }
+}
+
+
+.services {
+    background: var(--snd-bg-color);
+}
+
 .services h2{
     margin-bottom: 5rem;
 }
@@ -207,11 +337,11 @@ span{
 
 .services-container .services-box{
     flex: 1 1 30rem;
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border: .2rem solid var(--snd-bg-color);
     transition: .5s ease;
 }
 
@@ -235,7 +365,7 @@ span{
 }
 
 .portfolio{
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 
 .portfolio h2{
@@ -313,6 +443,10 @@ span{
 }
 
 
+.contact{
+    background: var(--snd-bg-color);
+}
+
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -337,7 +471,7 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -449,7 +583,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text{
