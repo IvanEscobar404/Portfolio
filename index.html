@@ -254,13 +254,22 @@
     <!--Footer design-->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2024 by @IvanEscobar -404- | All Rights Reserved</p>
+            <p id="footer-text">Copyright &copy; <span id="current-year"></span> by @IvanEscobar -404- | All Rights Reserved</p>
         </div>
 
         <div class="footer-iconTop">
             <a href="#home"><i class="fa-solid fa-angles-up"></i></a>
         </div>
     </footer>
+
+    <script>
+        // elemento donde mostrar el año
+        const yearElement = document.getElementById("current-year");
+        // el año actual
+        const currentYear = new Date().getFullYear();
+        // el año en el elemento
+        yearElement.textContent = currentYear;
+    </script>
 
 
 <!-- Incluye la biblioteca EmailJS -->
